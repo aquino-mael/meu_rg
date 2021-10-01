@@ -1,16 +1,26 @@
-# meu_rg
+# Meu RG
 
-A new Flutter project.
+## Link para publicação, no Linkedin: [Desafio Inova Maranhão](https://www.linkedin.com/posts/tais-ximenes-43093a192_meu-1%C2%BA-rg-activity-6846901096720474112-qBeY)
 
-## Getting Started
+Uma campanha para emissão de Registro Geral (RG) para 
+bebês e crianças de até 5 anos foi criada por um 
+departamento pertencente a prefeitura de uma pequena 
+cidade do interior do Maranhão de forma gratuita por conta 
+de uma alta taxa de crianças sem registro.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+A alta procura pelo serviço no local e a dificuldade de tirar 
+fotos das crianças de colo para realizar o registo vem 
+atrasando de forma significativa os processos da campanha.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Para solucionar o problema, foi idealizado um aplicativo que 
+pudesse ajudar tanto no processo de agendamento, como no 
+processo de cadastro e da realização das fotos.
+
+
+Para atender esse objetivo, o aplicativo gira em torno de 
+duas funções: Agendamento e Filômetro
+
+- Design: [Tais Ximenes](https://www.linkedin.com/in/tais-ximenes-43093a192/)
+- Dev: [Ismael Aquino](https://www.linkedin.com/in/ismael-aquino/)
