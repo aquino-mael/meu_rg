@@ -166,11 +166,7 @@ class MyPersistentHeader extends SliverPersistentHeaderDelegate {
             alignment: Alignment.center,
             children: [
               Text('MEU PRIMEIRO RG'),
-              Image.network(
-                'https://media-exp1.licdn.com/dms/image/C4E03AQEVZJpcDizJHQ/profile-displayphoto-shrink_400_400/0/1630687034092?e=1638403200&v=beta&t=qiXpYuxpIYTcnpyKfKzzoqc0vcZyFrnb20LHf_mI5oY',
-                height: 100,
-                width: 100,
-              )
+              Placeholder(),
             ],
           ),
         );
