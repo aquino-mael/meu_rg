@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../app/app.dart';
+import 'widgets/my_persistent_header.dart';
 
 class InitialPage extends StatefulWidget {
   const InitialPage({ Key key }) : super(key: key);
@@ -10,13 +11,13 @@ class InitialPage extends StatefulWidget {
 }
 
 class _InitialPageState extends State<InitialPage> {
-  ScrollController scrollController;
+  ScrollController _scrollController;
 
   @override
   void initState() {
     super.initState();
 
-    scrollController = ScrollController();
+    _scrollController = ScrollController();
   }
 
   @override
@@ -30,8 +31,10 @@ class _InitialPageState extends State<InitialPage> {
       child: Scaffold(
         backgroundColor: AppColors.primaryColor,
         body: CustomScrollView(
+          controller: _scrollController,
           slivers: [
             SliverPersistentHeader(
+              pinned: true,
               delegate: MyPersistentHeader(
                 eightyFivePercentOfScreen: MediaQuery.of(context).size.height * 0.85,
               ),
@@ -39,7 +42,7 @@ class _InitialPageState extends State<InitialPage> {
             SliverToBoxAdapter(
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                  maxHeight: 600
+                  maxHeight: MediaQuery.of(context).size.height - 150
                 ),
                 child: Material(
                   elevation: 2.0,
@@ -146,40 +149,4 @@ class _InitialPageState extends State<InitialPage> {
       ),
     );
   }
-}
-
-
-class MyPersistentHeader extends SliverPersistentHeaderDelegate {
-  final double eightyFivePercentOfScreen;
-
-  const MyPersistentHeader({
-    @required this.eightyFivePercentOfScreen,
-  });
-
-  @override
-  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        print(constraints);
-        return Center(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Text('MEU PRIMEIRO RG'),
-              Placeholder(),
-            ],
-          ),
-        );
-      },
-    );
-  }
-
-  @override
-  double get maxExtent => eightyFivePercentOfScreen;
-
-  @override
-  double get minExtent => 100;
-
-  @override
-  bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) => false;
 }
