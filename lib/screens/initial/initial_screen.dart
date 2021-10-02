@@ -4,6 +4,8 @@ import '../../app/app.dart';
 import 'widgets/my_persistent_header.dart';
 import 'widgets/widgets.dart';
 
+const kMillesecondsDurationAnimation = 500;
+
 class InitialPage extends StatefulWidget {
   const InitialPage({ Key key }) : super(key: key);
 
@@ -33,11 +35,21 @@ class _InitialPageState extends State<InitialPage> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        if(_pageController.page == 0)
-          return true;
+        if(_pageController.page != 0) {
+          _changeToPage(0);
+          return false;
+        } else if(_scrollController.offset != 0.0) {
+          _scrollController.animateTo(
+            0.0,
+            duration: Duration(
+              milliseconds: kMillesecondsDurationAnimation
+            ),
+            curve: Curves.linear,
+          );
+          return false;
+        }
 
-        _changeToPage(0);
-        return false;
+        return true;
       },
       child: SafeArea(
         child: Scaffold(
@@ -178,7 +190,7 @@ class _InitialPageState extends State<InitialPage> {
     _pageController.animateToPage(
       pageIndex,
       duration: Duration(
-        milliseconds: 500,
+        milliseconds: kMillesecondsDurationAnimation,
       ),
       curve: Curves.linear,
     );
