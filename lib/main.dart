@@ -35,6 +35,10 @@ class MeuRg extends StatelessWidget {
         
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
+            padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 16.0)),
+            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0)
+            )),
             textStyle: MaterialStateProperty.all(
               TextStyle(
                 fontWeight: FontWeight.bold,
