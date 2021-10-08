@@ -32,7 +32,11 @@ class MeuRg extends StatelessWidget {
           onError: AppColors.black,
           brightness: Brightness.light,
         ),
-        
+
+        appBarTheme: AppBarTheme(
+          centerTitle: true
+        ),
+
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 16.0)),
