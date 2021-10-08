@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'MEU PRIMEIRO RG',
+          App.appName.toUpperCase(),
           style: TextStyle(
             fontWeight: FontWeight.bold
           ),
