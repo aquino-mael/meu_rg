@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import '../../app/app.dart';
+import '../scheduling/scheduling.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({ Key key }) : super(key: key);
@@ -40,6 +43,7 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.horizontal(
                     left: Radius.circular(20.0)
                   ),
+                  elevation: 4.0,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
@@ -61,7 +65,15 @@ class HomeScreen extends StatelessWidget {
               ),
               Spacer(),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    CupertinoPageRoute(
+                      builder: (context) {
+                        return SchedulingScreen();
+                      },
+                    ),
+                  );
+                },
                 child: Text(
                   'AGENDAMENTO',
                 ),
