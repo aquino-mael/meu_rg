@@ -17,7 +17,7 @@ class LoginMenu extends StatelessWidget {
             Text(
               'ACESSAR CONTA',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline4.copyWith(
+              style: Theme.of(context).textTheme.headline4!.copyWith(
                 fontWeight: FontWeight.bold,
               ),
             ),

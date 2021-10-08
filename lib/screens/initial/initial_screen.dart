@@ -7,15 +7,15 @@ import 'widgets/widgets.dart';
 const kMillesecondsDurationAnimation = 500;
 
 class InitialPage extends StatefulWidget {
-  const InitialPage({ Key key }) : super(key: key);
+  const InitialPage({ Key? key }) : super(key: key);
 
   @override
   _InitialPageState createState() => _InitialPageState();
 }
 
 class _InitialPageState extends State<InitialPage> {
-  ScrollController _scrollController;
-  PageController _pageController;
+  late ScrollController _scrollController;
+  late PageController _pageController;
 
   @override
   void initState() {

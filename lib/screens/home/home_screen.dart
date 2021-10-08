@@ -5,7 +5,7 @@ import '../../app/app.dart';
 import '../scheduling/scheduling.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({ Key key }) : super(key: key);
+  const HomeScreen({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           'DOCUMENTOS NECESSÁRIOS:',
-                          style: Theme.of(context).textTheme.headline6.copyWith(
+                          style: Theme.of(context).textTheme.headline6!.copyWith(
                             fontWeight: FontWeight.bold
                           ),
                         ),
@@ -94,7 +94,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildListItem({
-    @required String text,
+    required String text,
   }) {
     return ListTile(
       contentPadding: const EdgeInsets.symmetric(

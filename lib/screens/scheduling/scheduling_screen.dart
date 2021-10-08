@@ -4,14 +4,14 @@ import 'package:intl/intl.dart';
 import '../../app/app.dart';
 
 class SchedulingScreen extends StatefulWidget {
-  const SchedulingScreen({ Key key }) : super(key: key);
+  const SchedulingScreen({ Key? key }) : super(key: key);
 
   @override
   _SchedulingScreenState createState() => _SchedulingScreenState();
 }
 
 class _SchedulingScreenState extends State<SchedulingScreen> {
-  TextEditingController _dateInputController;
+  late TextEditingController _dateInputController;
 
   final List<String> _options = [
     'Selecione',
@@ -32,7 +32,7 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
     '',
   ];
 
-  int _selectedLocal = 0;
+  int? _selectedLocal = 0;
   DateTime _selectedDate = DateTime.now();
 
   @override
@@ -83,7 +83,7 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
                 children: [
                   Text(
                     'Selecione o local de registro',
-                    style: Theme.of(context).textTheme.subtitle1.copyWith(
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
                       color: AppColors.primaryColor,
                       fontWeight: FontWeight.w500
                     ),
@@ -129,7 +129,7 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
                 children: [
                   Text(
                     'Selecione o local de registro',
-                    style: Theme.of(context).textTheme.subtitle1.copyWith(
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
                       color: AppColors.primaryColor,
                       fontWeight: FontWeight.w500
                     ),
@@ -171,7 +171,7 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
                 children: [
                   Text(
                     'Selecione o local de registro',
-                    style: Theme.of(context).textTheme.subtitle1.copyWith(
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
                       color: AppColors.primaryColor,
                       fontWeight: FontWeight.w500
                     ),
@@ -237,14 +237,14 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
     );
   }
 
-  void _onChangeLocal(int newIndexLocal) {
+  void _onChangeLocal(int? newIndexLocal) {
     setState(() {
       _selectedLocal = newIndexLocal;
     });
   }
 
   Future<void> _selectADateOnDatePicker() async {
-    DateTime date = await showDatePicker(
+    DateTime? date = await showDatePicker(
       context: context,
       initialDate: _selectedDate,
       firstDate: DateTime(1900),

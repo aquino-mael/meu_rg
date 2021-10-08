@@ -4,7 +4,7 @@ class MyPersistentHeader extends SliverPersistentHeaderDelegate {
   final double eightyFivePercentOfScreen;
 
   const MyPersistentHeader({
-    @required this.eightyFivePercentOfScreen,
+    required this.eightyFivePercentOfScreen,
   });
 
   @override
