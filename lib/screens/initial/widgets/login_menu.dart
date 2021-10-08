@@ -37,7 +37,7 @@ class LoginMenu extends StatelessWidget {
               height: 16.0,
             ),
             TextFormField(
-              keyboardType: TextInputType.emailAddress,
+              keyboardType: TextInputType.visiblePassword,
               obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
