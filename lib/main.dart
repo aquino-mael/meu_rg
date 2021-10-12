@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app/app.dart';
+import 'core/core.dart';
 import 'screens/screens.dart';
 
 void main() {
@@ -11,6 +12,8 @@ class MeuRg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      navigatorKey: RouterNavigator.navigatorKey,
       title: 'Meu RG',
       theme: ThemeData(
         primaryColor: AppColors.primaryColor,

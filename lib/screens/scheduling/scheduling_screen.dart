@@ -157,7 +157,7 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           isDense: true,
-                          contentPadding: const EdgeInsets.symmetric(vertical: 4.0)
+                          contentPadding: const EdgeInsets.symmetric(vertical: 3.0)
                         ),
                         onTap: _selectADateOnDatePicker,
                       ),

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app/app.dart';
+import '../../../core/core.dart';
 import '../../home/home.dart';
 
 class LoginMenu extends StatelessWidget {
@@ -52,12 +53,8 @@ class LoginMenu extends StatelessWidget {
             ElevatedButton(
               child: Text('ENTRAR'),
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                  CupertinoPageRoute(
-                    builder: (context) {
-                      return HomeScreen();
-                    },
-                  ),
+                RouterNavigator.navigateToPage(
+                  page: HomeScreen(),
                 );
               },
             ),

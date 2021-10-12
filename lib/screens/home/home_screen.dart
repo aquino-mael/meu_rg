@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../app/app.dart';
+import '../../core/core.dart';
 import '../scheduling/scheduling.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -66,12 +67,8 @@ class HomeScreen extends StatelessWidget {
               Spacer(),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(
-                    CupertinoPageRoute(
-                      builder: (context) {
-                        return SchedulingScreen();
-                      },
-                    ),
+                  RouterNavigator.navigateToPage(
+                    page: SchedulingScreen(),
                   );
                 },
                 child: Text(
