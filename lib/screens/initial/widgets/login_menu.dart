@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app/app.dart';
 import '../../../core/core.dart';
 import '../../home/home.dart';
+import '../../screens.dart';
 
 class LoginMenu extends StatelessWidget {
   @override
@@ -53,7 +53,7 @@ class LoginMenu extends StatelessWidget {
             ElevatedButton(
               child: Text('ENTRAR'),
               onPressed: () {
-                RouterNavigator.navigateToPage(
+                RouterNavigator.navigateToScreen(
                   page: HomeScreen(),
                 );
               },

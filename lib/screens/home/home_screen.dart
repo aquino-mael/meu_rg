@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../app/app.dart';
@@ -67,7 +66,7 @@ class HomeScreen extends StatelessWidget {
               Spacer(),
               ElevatedButton(
                 onPressed: () {
-                  RouterNavigator.navigateToPage(
+                  RouterNavigator.navigateToScreen(
                     page: SchedulingScreen(),
                   );
                 },

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../app/app.dart';
-import 'widgets/my_persistent_header.dart';
+import '../../core/core.dart';
+import '../register/register.dart';
 import 'widgets/widgets.dart';
 
 const kMillesecondsDurationAnimation = 500;
@@ -58,7 +59,6 @@ class _InitialPageState extends State<InitialPage> {
             controller: _scrollController,
             slivers: [
               SliverPersistentHeader(
-                pinned: true,
                 delegate: MyPersistentHeader(
                   eightyFivePercentOfScreen: MediaQuery.of(context).size.height * 0.85,
                 ),
@@ -110,7 +110,11 @@ class _InitialPageState extends State<InitialPage> {
                                           ),
                                           ElevatedButton(
                                             child: Text('CADASTRAR'),
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              RouterNavigator.navigateToScreen(
+                                                page: RegisterScreen()
+                                              );
+                                            },
                                           ),
                                           SizedBox(
                                             height: 20.0,

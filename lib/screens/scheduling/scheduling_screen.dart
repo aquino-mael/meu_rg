@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../../app/app.dart';
+import '../../utils/utils.dart';
 
 class SchedulingScreen extends StatefulWidget {
   const SchedulingScreen({ Key? key }) : super(key: key);
@@ -159,7 +160,14 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
                           isDense: true,
                           contentPadding: const EdgeInsets.symmetric(vertical: 3.0)
                         ),
-                        onTap: _selectADateOnDatePicker,
+                        onTap: () async {
+                          final date = await selectDateOnDatePicker(context, _selectedDate);
+                          if(date == null) return;
+                          if(date == _selectedDate) return;
+
+                          _selectedDate = date;
+                          setState(() {});
+                        },
                       ),
                     ),
                   ),
@@ -242,21 +250,6 @@ class _SchedulingScreenState extends State<SchedulingScreen> {
   void _onChangeLocal(int? newIndexLocal) {
     setState(() {
       _selectedLocal = newIndexLocal;
-    });
-  }
-
-  Future<void> _selectADateOnDatePicker() async {
-    DateTime? date = await showDatePicker(
-      context: context,
-      initialDate: _selectedDate,
-      firstDate: DateTime(1900),
-      lastDate: DateTime(DateTime.now().year, DateTime.now().month + 1, 15),
-    );
-    if(date == null) return;
-    if(date == _selectedDate) return;
-
-    setState(() {
-      _selectedDate = date;
     });
   }
 }
