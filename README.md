@@ -22,5 +22,6 @@ processo de cadastro e da realização das fotos.
 Para atender esse objetivo, o aplicativo gira em torno de 
 duas funções: Agendamento e Filômetro
 
+## LinkedIn
 - Design: [Tais Ximenes](https://www.linkedin.com/in/tais-ximenes-43093a192/)
-- Dev: [Ismael Aquino](https://www.linkedin.com/in/ismael-aquino/)
+- Dev   : [Ismael Aquino](https://www.linkedin.com/in/ismael-aquino/)
