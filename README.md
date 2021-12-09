@@ -1,6 +1,6 @@
 # Meu RG
 
-## Link para publicação, no Linkedin: [Desafio Inova Maranhão](https://www.linkedin.com/posts/tais-ximenes-43093a192_meu-1%C2%BA-rg-activity-6846901096720474112-qBeY)
+## Link da publicação no Linkedin: [Desafio Inova Maranhão](https://www.linkedin.com/posts/tais-ximenes-43093a192_meu-1%C2%BA-rg-activity-6846901096720474112-qBeY)
 
 Uma campanha para emissão de Registro Geral (RG) para 
 bebês e crianças de até 5 anos foi criada por um 
